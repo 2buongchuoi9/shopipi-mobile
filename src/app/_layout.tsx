@@ -1,3 +1,5 @@
+import AuthProvider from "@/contexts/AuthContext"
+import CategoryProvider from "@/contexts/CategoryContex"
 import { useFonts } from "expo-font"
 import { SplashScreen, Stack } from "expo-router"
 import React, { useEffect } from "react"
@@ -18,9 +20,14 @@ export default function RootLayout() {
     }
     return (
         <PaperProvider>
-            <Stack>
-                <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            </Stack>
+            <AuthProvider>
+                <CategoryProvider>
+                    <Stack>
+                        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+                        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+                    </Stack>
+                </CategoryProvider>
+            </AuthProvider>
         </PaperProvider>
     )
 }

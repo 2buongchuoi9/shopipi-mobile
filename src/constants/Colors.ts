@@ -12,4 +12,5 @@ export const Colors = {
     white: "#FCFCFC",
     tintColor: "#723FEB",
     blue: "#0000FF",
+    bg: "#CFCFCF",
 }
