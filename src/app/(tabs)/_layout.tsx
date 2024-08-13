@@ -35,7 +35,14 @@ const Layout = () => {
             renderScene={renderScene}
             activeColor={Colors.blue} // Màu của icon và title khi được chọn
             inactiveColor={Colors.black} // Màu của icon và title khi không được chọn
-            barStyle={{ backgroundColor: Colors.white }}
+            barStyle={{
+                backgroundColor: Colors.white,
+                shadowColor: "black", // Màu của bóng
+                shadowOffset: { width: 0, height: 2 },
+                shadowOpacity: 0.3,
+                shadowRadius: 4,
+                elevation: 5,
+            }}
         />
     )
 }

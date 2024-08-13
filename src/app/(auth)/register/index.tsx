@@ -29,7 +29,7 @@ const Register = () => {
             accessToken.set(data.token.accessToken)
             refreshTokenStorage.set(data.token.refreshToken)
             // Handle successful registration
-            router.push("/home")
+            router.push("/")
         } catch (err) {
             console.error("Registration error:", err)
             setError("Đăng ký không thành công. Vui lòng thử lại.")
